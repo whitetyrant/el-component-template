@@ -5,10 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "package": "vue-cli-service build --target lib ./src/package/index.js --name el-component-template --dest el-component-template"
+
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "element-plus": "^2.3.5",
     "vue": "^3.2.13"
   },
   "devDependencies": {
