@@ -1,21 +1,22 @@
 <template>
     <el-table
-        :data="tableData"
-        :width="`${tableWidth}px`"
-        :height="screenHeight"
-        border
-        :header-cell-style="{textAlign: 'center', background: '#FAFAFA'}"
-        :cell-style="{ textAlign: 'center', color: '#3D3D3D' }"
+            :v-loading="isLoading"
+            :data="tableData"
+            :width="`${tableWidth}px`"
+            :height="screenHeight"
+            border
+            :header-cell-style="{textAlign: 'center', background: '#FAFAFA'}"
+            :cell-style="{ textAlign: 'center', color: '#3D3D3D' }"
     >
         <el-table-column
-            v-if="columns[0] && columns[0].type"
-            :type="columns[0].type"
+                v-if="columns[0] && columns[0].type"
+                :type="columns[0].type"
         />
 
         <multi-level-table-column
-            v-for="(column, index) in remainingColumns"
-            :key="index"
-            :column="column"
+                v-for="(column, index) in remainingColumns"
+                :key="index"
+                :column="column"
         />
     </el-table>
 </template>
@@ -29,6 +30,10 @@ export default {
         MultiLevelTableColumn
     },
     props: {
+        isLoading: {
+            type: 'boolean',
+            default: false,
+        },
         tableData: {
             type: Array,
             required: true
