@@ -7,10 +7,11 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "package": "vue-cli-service build --target lib ./src/package/index.js --name el-component-template --dest el-component-template"
-
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
     "core-js": "^3.8.3",
+    "el-component-template": "^1.0.5",
     "element-plus": "^2.3.5",
     "vue": "^3.2.13"
   },
