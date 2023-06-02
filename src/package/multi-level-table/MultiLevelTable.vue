@@ -31,7 +31,7 @@ export default {
     },
     props: {
         isLoading: {
-            type: 'boolean',
+            type: Boolean,
             default: false,
         },
         tableData: {
